@@ -74,7 +74,7 @@ function Form() {
     };
 
     return (
-        <div className="min-h-screen bg-white py-8">
+        <div id="form" className="min-h-screen bg-white py-8">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
@@ -213,17 +213,8 @@ function Form() {
                                 
                                 {dailySummaryEnabled && (
                                     <div className="ml-8 space-y-2">
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            Summary Time
-                                        </label>
-                                        <input
-                                            type="time"
-                                            value={summaryTime}
-                                            onChange={(e) => setSummaryTime(e.target.value)}
-                                            className="px-4 py-2 border border-gray-300 rounded-lg bg-white text-black focus:border-black focus:ring-black"
-                                        />
                                         <p className="text-xs text-gray-500">
-                                            Daily summary will include total work sessions and hours
+                                            Daily summary will be sent at midnight and include total work sessions and hours
                                         </p>
                                     </div>
                                 )}

@@ -22,35 +22,28 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             <a 
-              href="#home" 
+              href="#start" 
               className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 relative group"
             >
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
             </a>
             <a 
-              href="#setup" 
-              className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 relative group"
-            >
-              Setup
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
-            </a>
-            <a 
-              href="#guide" 
+              href="#tut" 
               className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 relative group"
             >
               Guide
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
             </a>
             <a 
-              href="#about" 
+              href="#form" 
               className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 relative group"
             >
-              About
+              Setting
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
             </a>
             <a 
-              href="#contact" 
+              href="#footer" 
               className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200 relative group"
             >
               Contact
@@ -78,35 +71,28 @@ const Navbar = () => {
           <div className="md:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-4">
               <a 
-                href="#home" 
+                href="#start" 
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Home
+                Start Page
               </a>
               <a 
-                href="#setup" 
+                href="#tut" 
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Setup
+                Tutorial
               </a>
               <a 
-                href="#guide" 
+                href="#form" 
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Guide
+                Form
               </a>
               <a 
-                href="#about" 
-                className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About
-              </a>
-              <a 
-                href="#contact" 
+                href="#footer" 
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

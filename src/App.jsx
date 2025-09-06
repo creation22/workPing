@@ -7,12 +7,14 @@ import FrontPage from './components/main/FrontPage'
 import Guide from './components/main/Guide'
 import Testimonial from './components/main/Testimonial'
 import Form from './components/main/Form'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Analytics/>
       <Navbar/>
       <FrontPage/>
       <Guide/>

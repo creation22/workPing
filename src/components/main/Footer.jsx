@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="bg-black text-white">
+        <footer id="footer" className="bg-black text-white">
             <div className="container mx-auto px-4 py-8">
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
                     <div className="flex items-center space-x-2">
@@ -62,6 +62,16 @@ function Footer() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-800 text-center">
+                    <div className="mb-4">
+                        <a
+                            href="https://buymeacoffee.com/creation22"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-white hover:bg-gray-100 text-black font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
+                        >
+                            ☕ Buy Me a Coffee
+                        </a>
+                    </div>
                     <p className="text-gray-400 text-sm">
                         © 2025 WorkPing. All rights reserved.
                     </p>

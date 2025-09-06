@@ -4,7 +4,7 @@ import { SparklesTextUse } from "../ui/SparklesTextUse";
 
 function frontPage() {
     return (
-        <div className="min-h-screen bg-white">
+        <div id="start" className="min-h-screen bg-white">
             <div className="container mx-auto px-4 py-4">
                 <div className="mb-2">
                     <AnimatedShinyTextUse/>
