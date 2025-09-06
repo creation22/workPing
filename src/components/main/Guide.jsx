@@ -29,8 +29,7 @@ function Guide() {
                         
                         <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-6 mb-6">
                             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                                To get started, you'll need to add the Telegram Chat IDs of the people you want to notify about your work status. 
-                                This could be your family members, spouse, or close friends who need to know when you're working.
+                            Start by adding the Telegram Chat IDs of the people you want to keep informed about your work status. This could include family members, close friends, or anyone who needs updates when you’re working
                             </p>
                         </div>
 
@@ -40,15 +39,15 @@ function Guide() {
                                 <ul className="space-y-2 text-slate-600 dark:text-slate-300">
                                     <li className="flex items-start">
                                         <span className="text-blue-600 mr-2">•</span>
-                                        Open Telegram and go to your chat
+                                        Open Telegram and go to the Search bar. 
                                     </li>
                                     <li className="flex items-start">
                                         <span className="text-blue-600 mr-2">•</span>
-                                        Look for the chat ID in the URL or settings
+                                        Search for @UserInfoBot, click Start, or send hi. The bot will provide your Chat ID. 
                                     </li>
                                     <li className="flex items-start">
                                         <span className="text-blue-600 mr-2">•</span>
-                                        Copy the ID and paste it in WorkPing
+                                        Copy the Chat ID and paste it into WorkPing.
                                     </li>
                                 </ul>
                             </div>
@@ -62,7 +61,7 @@ function Guide() {
                                     </li>
                                     <li className="flex items-start">
                                         <span className="text-green-600 mr-2">✓</span>
-                                        Group chats work perfectly
+                                        Receive a daily summary of your work mode activity 
                                     </li>
                                     <li className="flex items-start">
                                         <span className="text-green-600 mr-2">✓</span>
@@ -99,19 +98,6 @@ function Guide() {
                     </div>
                 </div>
 
-                {/* Next Steps */}
-                <div className="text-center">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-2xl mx-auto">
-                        <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-                        <p className="text-blue-100 mb-6">
-                            Once you've watched the tutorial and added your chat IDs, you're all set! 
-                            WorkPing will automatically keep your loved ones updated.
-                        </p>
-                        <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-200">
-                            Download Extension Now
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     );

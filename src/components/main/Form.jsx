@@ -240,6 +240,19 @@ function Form() {
                         </div>
                     </form>
                 </div>
+
+                {/* Next Steps - After Form */}
+                <div className="text-center mt-12">
+                    <div className="bg-white rounded-2xl p-8 text-black max-w-2xl mx-auto border border-gray-200 shadow-xl">
+                        <h3 className="text-2xl font-bold mb-4">Next Steps</h3>
+                        <p className="text-gray-600 mb-6">
+                            Awesome! You've set up your preferences, watched the tutorial, and are ready to download the extension to start using WorkPing!!
+                        </p>
+                        <button className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
+                            Download Extension Now
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );

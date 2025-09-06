@@ -38,6 +38,16 @@ function Footer() {
                         </a>
 
                         <a
+                            href="mailto:your-email@gmail.com"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
+                        >
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h3.819L12 8.73l6.545-4.91h3.819c.904 0 1.636.732 1.636 1.636z"/>
+                            </svg>
+                            <span className="hidden sm:inline">Gmail</span>
+                        </a>
+
+                        <a
                             href="https://chrome.google.com/webstore/detail/workping/your-extension-id"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -53,7 +63,7 @@ function Footer() {
 
                 <div className="mt-6 pt-6 border-t border-gray-800 text-center">
                     <p className="text-gray-400 text-sm">
-                        © 2024 WorkPing. All rights reserved.
+                        © 2025 WorkPing. All rights reserved.
                     </p>
                 </div>
             </div>
