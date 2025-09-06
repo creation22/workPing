@@ -51,8 +51,8 @@ function Testimonial() {
                             </blockquote>
                             <div className="flex items-center justify-center">
                                 <div className="text-center">
-                                    <div className="font-semibold">Alex Chen</div>
-                                    <div className="text-gray-300">CEO & Founder, WorkPing</div>
+                                    <div className="font-semibold">Srajan Gupta</div>
+                                    <div className="text-gray-300">Founder, WorkPing</div>
                                 </div>
                             </div>
                         </div>
