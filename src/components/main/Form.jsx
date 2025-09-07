@@ -95,11 +95,14 @@ function Form() {
     
         const formData = {
             userId,
-            chatIds: chatIds.filter(id => id.trim()), // just strings
+            chatIds: chatIds
+                .filter(id => id.trim())
+                .map(id => ({ chatId: id.trim(), label: "General" })), // wrap each ID in an object
             workOnMessage: workModeOnMessage.trim(),
             workOffMessage: workModeOffMessage.trim(),
             sendSummary: dailySummaryEnabled
         };
+        
     
         try {
             const res = await axios.post(
