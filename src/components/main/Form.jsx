@@ -1,6 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 
 function Form() {
+    // Generate a unique userId for this session if not already in localStorage
+    const [userId, setUserId] = useState(() => {
+        const storedId = localStorage.getItem('userId');
+        if (storedId) return storedId;
+        const newId = uuidv4();
+        localStorage.setItem('userId', newId);
+        return newId;
+    });
+
     // State management
     const [chatIds, setChatIds] = useState(['']);
     const [workModeOnMessage, setWorkModeOnMessage] = useState('Starting work mode! 🚀');
@@ -8,6 +19,28 @@ function Form() {
     const [dailySummaryEnabled, setDailySummaryEnabled] = useState(false);
     const [summaryTime, setSummaryTime] = useState('18:00');
     const [errors, setErrors] = useState({});
+
+    // Fetch existing settings from backend on mount
+    useEffect(() => {
+        const fetchSettings = async () => {
+            try {
+                const res = await axios.get(
+                    `https://workping-backend.onrender.com/api/settings/${userId}`
+                );
+                const data = res.data;
+                if (data) {
+                    setChatIds(data.chatIds || ['']);
+                    setWorkModeOnMessage(data.workOnMessage || '');
+                    setWorkModeOffMessage(data.workOffMessage || '');
+                    setDailySummaryEnabled(data.sendSummary || false);
+                }
+            } catch (err) {
+                console.log('No existing settings found, starting fresh.');
+            }
+        };
+        fetchSettings();
+    }, [userId]);
+    
 
     // Add new chat ID
     const addChatId = () => {
@@ -55,23 +88,32 @@ function Form() {
     };
 
     // Handle form submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validateForm()) {
-            const formData = {
-                chatIds: chatIds.filter(id => id.trim()),
-                workModeOnMessage: workModeOnMessage.trim(),
-                workModeOffMessage: workModeOffMessage.trim(),
-                dailySummary: {
-                    enabled: dailySummaryEnabled,
-                    time: dailySummaryEnabled ? summaryTime : null
-                }
-            };
-            console.log('Form submitted:', formData);
-            // Here you would typically send the data to your backend
+    
+        if (!validateForm()) return;
+    
+        const formData = {
+            userId,
+            chatIds: chatIds.filter(id => id.trim()), // just strings
+            workOnMessage: workModeOnMessage.trim(),
+            workOffMessage: workModeOffMessage.trim(),
+            sendSummary: dailySummaryEnabled
+        };
+    
+        try {
+            const res = await axios.post(
+                'https://workping-backend.onrender.com/api/settings',
+                formData
+            );
             alert('Settings saved successfully!');
+            console.log('Saved settings:', res.data);
+        } catch (err) {
+            console.error('Error saving settings:', err.response || err);
+            alert('Error saving settings. Check console.');
         }
     };
+    
 
     return (
         <div id="form" className="min-h-screen bg-white py-8">
@@ -139,6 +181,7 @@ function Form() {
                             </div>
                         </div>
 
+                        {/* Work Mode Messages */}
                         <div className="space-y-4">
                             <h2 className="text-xl font-semibold text-black">
                                 Work Mode Messages
@@ -192,6 +235,7 @@ function Form() {
                             </div>
                         </div>
 
+                        {/* Daily Summary Section */}
                         <div className="space-y-4">
                             <h2 className="text-xl font-semibold text-black">
                                 Daily Summary
@@ -221,6 +265,7 @@ function Form() {
                             </div>
                         </div>
 
+                        {/* Submit Button */}
                         <div className="flex justify-end pt-6 border-t border-gray-200">
                             <button
                                 type="submit"
@@ -232,7 +277,7 @@ function Form() {
                     </form>
                 </div>
 
-                {/* Next Steps - After Form */}
+                {/* Next Steps Section */}
                 <div className="text-center mt-12">
                     <div className="bg-white rounded-2xl p-8 text-black max-w-2xl mx-auto border border-gray-200 shadow-xl">
                         <h3 className="text-2xl font-bold mb-4">Next Steps</h3>
