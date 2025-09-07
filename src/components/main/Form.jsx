@@ -109,6 +109,8 @@ function Form() {
                 'https://workping-backend.onrender.com/api/settings',
                 formData
             );
+            const returnedUserId = res.data.userId || userId;
+            localStorage.setItem('userId', returnedUserId);
             alert('Settings saved successfully!');
             console.log('Saved settings:', res.data);
         } catch (err) {
