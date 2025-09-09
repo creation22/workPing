@@ -60,25 +60,29 @@ function Testimonial() {
                 </div>
 
                 <div className="text-center">
-                    <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto border border-gray-200">
-                        <h3 className="text-2xl font-bold text-black mb-4">
-                            Enter Your Email
-                        </h3>
-                        <p className="text-gray-600 mb-6">
-                            Stay informed about our next product updates and new features!
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                            <input 
-                                type="email" 
-                                placeholder="Enter your email address"
-                                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-white text-black"
-                            />
-                            <button className="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
-                                Subscribe
-                            </button>
-                        </div>
-                    </div>
-                </div>
+  <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto border border-gray-200">
+    <h3 className="text-2xl font-bold text-black mb-4">
+      We’d Love Your Feedback
+    </h3>
+    <p className="text-gray-600 mb-6">
+      Share your thoughts, suggestions, or ideas for new features to help us improve our product!
+    </p>
+    
+    {/* Button to open Google Form */}
+    <div className="flex justify-center">
+      <a
+        href="https://forms.gle/3sHm7GLRSPVXHB3w9"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+      >
+        Give Feedback
+      </a>
+    </div>
+  </div>
+</div>
+
+
             </div>
         </div>
     );
