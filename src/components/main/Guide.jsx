@@ -49,6 +49,10 @@ function Guide() {
                                         <span className="text-blue-600 mr-2">•</span>
                                         Copy the Chat ID and paste it into WorkPing.
                                     </li>
+                                    <li className="flex items-start">
+                                        <span className="text-blue-600 mr-2">•</span>
+                                        Don’t forget to start our chatbot @workping22bot  you only need to do this once, and then it will be able to send you messages
+                                    </li>
                                 </ul>
                             </div>
                             
