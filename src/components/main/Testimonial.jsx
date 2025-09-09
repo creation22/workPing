@@ -37,27 +37,30 @@ function Testimonial() {
                         <MarqueeDemo/>
                     </div>
                 </div>
-
                 <div className="mb-16">
-                    <div className="bg-black rounded-2xl p-8 text-white max-w-4xl mx-auto">
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <span className="text-2xl">👨‍💼</span>
-                            </div>
-                            <blockquote className="text-xl md:text-2xl font-medium mb-6 leading-relaxed">
-                                "At WorkPing, we believe that technology should bring families closer, not create barriers. 
-                                Our mission is to help professionals maintain healthy work-life boundaries while keeping their loved ones informed. 
-                                Every feature we build is designed with family connection in mind."
-                            </blockquote>
-                            <div className="flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="font-semibold">Srajan Gupta</div>
-                                    <div className="text-gray-300">Founder, WorkPing</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div className="bg-black rounded-2xl p-8 text-white max-w-4xl mx-auto">
+    <div className="text-center">
+      <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center mx-auto mb-6">
+        <img 
+          src="https://i.ibb.co/W4Ky2fZw/srajan-1.png" 
+          alt="Srajan Gupta" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <blockquote className="text-xl md:text-2xl font-medium mb-6 leading-relaxed">
+        "At WorkPing, we believe that technology should bring families closer, not create barriers. 
+        Our mission is to help professionals maintain healthy work-life boundaries while keeping their loved ones informed. 
+        Every feature we build is designed with family connection in mind."
+      </blockquote>
+      <div className="flex items-center justify-center">
+        <div className="text-center">
+          <div className="font-semibold">Srajan Gupta</div>
+          <div className="text-gray-300">Founder, WorkPing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
                 <div className="text-center">
   <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto border border-gray-200">
