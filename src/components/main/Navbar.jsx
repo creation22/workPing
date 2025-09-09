@@ -75,21 +75,21 @@ const Navbar = () => {
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Start Page
+                Home
               </a>
               <a 
                 href="#tut" 
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Tutorial
+                Guide
               </a>
               <a 
                 href="#form" 
                 className="text-lg font-medium text-black hover:text-gray-600 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Form
+                Setting
               </a>
               <a 
                 href="#footer" 
