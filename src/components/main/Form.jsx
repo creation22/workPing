@@ -289,9 +289,15 @@ function Form() {
                         <p className="text-gray-600 mb-6">
                             Awesome! You've set up your preferences, watched the tutorial, and are ready to download the extension to start using WorkPing!!
                         </p>
-                        <button className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
-                            Download Extension Now
-                        </button>
+                           <a 
+      href="https://chromewebstore.google.com/detail/workping/fknebhdaeggbjkkiallkdcaggfnbiddn" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <button className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
+        Download Extension Now
+      </button>
+    </a>
                     </div>
                 </div>
             </div>

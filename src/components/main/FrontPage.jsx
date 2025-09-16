@@ -32,9 +32,15 @@ function frontPage() {
                         <p className="text-gray-600 mb-6">
                             Get started in seconds and never worry about your family wondering if you're working again.
                         </p>
-                        <button className="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
-                            Download Extension
-                        </button>
+                            <a 
+      href="https://chromewebstore.google.com/detail/workping/fknebhdaeggbjkkiallkdcaggfnbiddn" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <button className="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+        Download Extension
+      </button>
+    </a>
                     </div>
                 </div>
 
